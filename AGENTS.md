@@ -58,3 +58,23 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE 
 - Greenfield: No content yet
 - Aggregates output from Lean, Report, Slides
 - Coordinate with Orch-GroupAction for automated build
+
+## GITIGNORE
+
+```
+# Generated PDFs
+merged/*.pdf
+report/*.pdf
+slides/*.pdf
+
+# Build artifacts
+*.tmp
+*.bak
+
+# Editor
+.vscode/
+.DS_Store
+
+# Environment
+.env
+```
