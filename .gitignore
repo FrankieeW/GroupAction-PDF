@@ -6,3 +6,6 @@ node_modules/
 merged/*.pdf
 report/*.pdf
 slides/*.pdf
+
+#AI
+AGENTS.md

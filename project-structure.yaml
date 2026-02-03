@@ -1,0 +1,35 @@
+# GroupAction Project Structure
+# PDF (PDF Output Compilation)
+
+root: &root "/Users/fwmbam4/Documents/CodeHub"
+
+projects:
+  pdf:
+    <<: *root
+    path: "Artefact/GroupAction/PDF"
+    purpose: "PDF output compilation"
+
+  orchestration:
+    <<: *root
+    path: "Orchestration/GroupAction"
+    purpose: "CI, scripts, coordination hub"
+
+  artefacts:
+    <<: *root
+    path: "Artefact/GroupAction"
+    subprojects:
+      lean:
+        path: "Lean"
+        purpose: "Lean 4 formalization"
+      report:
+        path: "Report"
+        purpose: "LaTeX report generation"
+      slides:
+        path: "Slides"
+        purpose: "Beamer slides presentation"
+
+relative_paths:
+  to_orchestration: "../../Orchestration/GroupAction"
+  to_lean: "../Lean"
+  to_report: "../Report"
+  to_slides: "../Slides"
